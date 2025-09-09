@@ -1,0 +1,113 @@
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Teacher's Day</title>
+  <link href="https://fonts.googleapis.com/css2?family=Castro+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #fdfbfb, #fce7f3);
+      font-family: ' Castro Script', cursive;
+    }
+
+    /* Center Card */
+    .card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      z-index: 2;
+      position: relative;
+      max-width: 400px;
+  
+}
+
+    /* Heading with Flowers */
+    .card h1 {
+      font-family: 'Castro Script', cursive;
+  font-size: 2.5rem;
+  color: goldenrod;
+    }
+
+    .flower {
+      display: inline-block;
+      font-size: 2.2rem;
+      animation: spinGlow 3s linear infinite;
+    }
+
+    @keyframes spinGlow {
+      0% { transform: rotate(0deg) scale(1); text-shadow: 0 0 5px #ff8ee3; }
+      50% { transform: rotate(15deg) scale(1.2); text-shadow: 0 0 15px #ff66cc; }
+      100% { transform: rotate(0deg) scale(1); text-shadow: 0 0 5px #ff8ee3; }
+    }
+
+    /* Message */
+    .card p {
+      font-size: 1.2rem;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    /* Falling Flowers */
+    .falling {
+      position: absolute;
+      top: -50px;
+      font-size: 0.5rem;
+      animation: fall linear forwards;
+      opacity: 0.3;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+      70% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Card -->
+  <div class="card">
+    <h1>
+      <span class="flower">🌸</span>
+      Happy Teacher’s Day
+      <span class="flower">🌸</span>
+    </h1>
+    <p>
+      To the guiding star who lights the path of knowledge.<br>
+      Thank you for your wisdom, patience, and kindness.<br>
+      You make learning a beautiful journey! 💖
+    </p>
+  </div>
+
+  <!-- Script for Falling Flowers -->
+  <script>
+    function createFlower() {
+      const flower = document.createElement("div");
+      flower.classList.add("falling");
+      flower.innerText = "🌸";
+
+      flower.style.left = Math.random() * window.innerWidth + "px";
+      flower.style.fontSize = (15 + Math.random()) + "px";
+      flower.style.animationDuration = (4 + Math.random() ) + "s";
+
+      document.body.appendChild(flower);
+
+      setTimeout(() => flower.remove(), 9000);
+    }
+
+    setInterval(createFlower, 300);
+  </script>
+
+</body>
+</html>
