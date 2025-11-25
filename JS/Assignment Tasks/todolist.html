@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 200px;
+            padding: 100px;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30%;
+            text-align: center;
+        }
+        #project{
+            /* display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            margin:20px; */
+            background-color: antiquewhite;
+            border-radius: 20%;
+            text-align: center;
+            padding:80px;
+            margin:60px;
+        }
+        button{
+            background-color: lightblue;
+            color:white;
+            padding:0;
+            margin:0;
+        }
+        .completed{
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+        #heading{
+            background-color: grey;
+
+        }
+        h2{
+            text-align: center;
+        }
+        #inputText{
+            padding:10px;
+            margin:10px;
+        }
+        #dropdown{
+            padding:4px;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "project">
+        <h2 style="text-align: center;">To Do List</h2><br>
+        <input id="inputText" type="text" placeholder="Enter you Task"></input><br>
+        <select id="dropdown">
+            <option>Select Priority</option>
+            <option style="background-color: rgb(225, 136, 136);">High</option>
+            <option style="background-color: rgb(223, 223, 136);">Medium</option>
+            <option style="background-color: rgb(142, 214, 142)">Low</option>
+        </select>
+        <button onclick="addTask()">Add Task</button><br>
+        <div id = "Tasks">
+            <h2 id ="heading">Your Tasks</h2>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+    <script src="todolist.js"></script>
+</body>
+</html>

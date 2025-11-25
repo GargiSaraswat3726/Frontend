@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple To Do List</title>
+
+    <style>
+        
+        /* .task{
+            display:flex;
+            justify-content: center;
+            text-align: center;
+        } */
+        .task-box {
+            background: lightgray;
+            padding: 10px;
+            margin-top: 20px;
+            justify-content:center;
+        }
+
+        .task-item {
+            display:flex;
+            justify-content: center;
+            margin: 5px 0;
+            padding: 5px;
+            color: white;
+        }
+
+        .high {
+            background: rgb(245, 128, 128);
+        }
+
+        .medium {
+            background: rgb(251, 217, 155);
+        }
+
+        .low {
+            background: rgb(153, 153, 239);
+        }
+
+        .completed {
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+<div class="task">
+<h2>Simple To Do List</h2>
+<input id="taskInput" type="text" placeholder="Enter task">
+<select id="prioritySelect">
+    <option value="high">High Priority</option>
+    <option value="medium">Medium Priority</option>
+    <option value="low">Low Priority</option>
+</select>
+<button onclick="addTask()">Add Task</button>
+<div class="task-box" id="taskCard">
+    <h3>Your Tasks</h3>
+    <div id="taskList"></div>
+</div>
+</div>
+<script src="task.js"></script>
+
+</body>
+</html>

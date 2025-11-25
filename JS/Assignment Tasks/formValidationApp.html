@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+    input {
+  display: block;
+  margin-bottom: 5px;
+  padding: 8px;
+  width: 250px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.valid {
+  border: 2px solid green;
+}
+
+.invalid {
+  border: 2px solid red;
+}
+
+ </style>>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form id="myForm">
+  
+  <label>Name:</label>
+  <input type="text" id="name">
+  <p class="error" id="nameErr"></p>
+
+  <label>Email:</label>
+  <input type="text" id="email">
+  <p class="error" id="emailErr"></p>
+
+  <label>Password:</label>
+  <input type="password" id="password">
+  <p class="error" id="passErr"></p>
+
+  <button type="submit">Submit</button>
+
+</form>
+
+<script src="formValidationApp.js"></script>
+</body>
+</html>

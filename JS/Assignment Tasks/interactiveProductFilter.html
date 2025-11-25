@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    button {
+  margin: 5px;
+  padding: 5px 10px;
+}
+
+#search {
+  padding: 5px;
+  width: 200px;
+}
+
+#productList {
+  margin-top: 15px;
+}
+
+#productList li {
+  margin-bottom: 5px;
+}
+
+  </style>>
+</head>
+<body>
+
+<h2>Product Filter</h2>
+
+<!-- Buttons -->
+<button class="filter-btn" data-category="All">All</button>
+<button class="filter-btn" data-category="Electronics">Electronics</button>
+<button class="filter-btn" data-category="Clothing">Clothing</button>
+
+<!-- Bonus: Search box -->
+<br><br>
+<input type="text" id="search" placeholder="Search product...">
+
+<!-- Products will be shown here -->
+<ul id="productList"></ul>
+
+<script src="script.js"></script>
+</body>
+</html>
